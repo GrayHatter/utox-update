@@ -17,11 +17,15 @@ downloads signed updates from dl.utox.org
 
 7. Run the file
 
+#Adding and modifiying resources
+* The resource.rc file contains the main dialog definition, default icon, and mainfest that enables visual styles.
+* Use [ResEdit](www.resedit.net) to open and modify it.
+
 #Building
-
->windres icon.rc -O coff -o icon.res
-
->gcc icon.res main.c ./xz/*.c -lcomctl32 -luuid -lole32 -lgdi32 -lws2_32 -lsodium -s -Ofast
+* requires mingw-w64
+* requires libsodium 1.0.0 ([github](https://github.com/jedisct1/libsodium), [binary releases](https://download.libsodium.org/libsodium/releases/))
+* on windows use build.bat
+* on linux use build.sh
 
 #Todo
 
